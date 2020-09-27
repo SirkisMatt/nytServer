@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
+const expect = require('chai').expect;
 
 const app = express();
 
@@ -38,6 +39,4 @@ app.get('/books', (req, res) => {
       .json(results);
   });
 
-app.listen(8000, () => {
-    console.log('Server started on PORT 8000');
-});
+  module.exports = app;
